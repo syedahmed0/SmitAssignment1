@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmitAssignment</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a JavaScript function that reverse a number.
+
+      function faNum() {
+        var num = prompt("Enter the number you want to reversed: ");
+        var o = num;
+        var ra = 0,
+          hi;
+        while (o > 0) {
+          rem = o % 10;
+          ra = ra * 10 + hi;
+          o = Math.floor(o / 10);
+        }
+        console.log("You Entered the Number: " + num + " ");
+
+        console.log("Reveresed Number is : " + ra);
+      }
+
+      // 2. Write a JavaScript function that checks whether a passed string is palindrome or not?
+
+      var palindrome;
+      palindrome = prompt("Enter to Check Palindrome");
+      var pal = palindrome;
+      if (typeof num == "number") {
+        pal = pal.toString();
+        pal = pal.split("");
+        pal = pal.reverse();
+        pal = pal.join("");
+        pal = parseFloat(pal);
+        if (palindrome == pal) {
+          document.write("ANSWER 2: ");
+          document.write("It is Palindrome");
+          document.write("<br>");
+          document.write("<br>");
+        } else {
+          document.write("ANSWER 2: ");
+          document.write("It is not a Palindrome");
+          document.write("<br>");
+          document.write("<br>");
+        }
+      } else {
+        pal = pal.split("");
+        pal = pal.reverse();
+        pal = pal.join("");
+        if (palindrome == pal) {
+          document.write("ANSWER 2: ");
+          document.write("It is Palindrome");
+          document.write("<br>");
+          document.write("<br>");
+        } else {
+          document.write("ANSWER 2: ");
+          document.write("It is not a Palindrome");
+          document.write("<br>");
+          document.write("<br>");
+        }
+      }
+
+      // 3. Write a JavaScript function that generates all combinations of a string.
+      function checkCombi(star) {
+        var list = [];
+        for (var i = 0; i < star.length; i++) {
+          for (var j = i + 1; j < star.length + 1; j++) {
+            list.push(star.slice(i, j));
+          }
+        }
+        return list;
+      }
+      document.write(checkCombi("dog"));
+
+      // 4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+
+      var order;
+      order = prompt("Enter anything you want to inorder"); //input
+      if (typeof num == "number") {
+        order = order.toString();
+        order = order.split("");
+        order = order.sort();
+        order = order.join("");
+        order = parseFloat(order);
+        document.write("ANSWER 4: ");
+        document.write(order);
+        document.write("<br>");
+        document.write("<br>");
+      } else {
+        order = order.split("");
+        order = order.sort();
+        order = order.join("");
+        document.write("ANSWER 4: ");
+        document.write(order);
+        document.write("<br>");
+        document.write("<br>");
+      }
+
+      // 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+
+      function upperCase(str) {
+        var array = str.split(" ");
+        var newArray = [];
+
+        for (var x = 0; x < array.length; x++) {
+          newArray.push(array[x].charAt(0).toUpperCase() + array[x].slice(1));
+        }
+        return newArray.join(" ");
+      }
+      console.log(upperCase("the quick brown fox"));
+      // 6. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+
+      function HelloWord(string) {
+        var strr = string.split(" ");
+        var webi = 0;
+        var foo = null;
+        for (var i = 0; i <= strr.length - 1; i++) {
+          if (webi < strr[i].length) {
+            webi = str[i].length;
+            foo = strr[i];
+          }
+        }
+        return foo;
+      }
+
+      console.log(HelloWord("Web Development Tutorial"));
+
+      // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
+      function Prime(e) {
+        if (e === 1) {
+          return false;
+        } else if (e === 2) {
+          return true;
+        } else {
+          for (var i = 2; i < e; i++) {
+            if (e % i === 0) {
+              return false;
+            }
+          }
+          return true;
+        }
+      }
+      document.write(Prime(30));
+
+      // 10. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
+
+      var arr = [1, 2, 3, 4, 5];
+      var outputArr = [];
+      function findNo() {
+        outputArr.push(arr[1], arr[arr.length - 2]);
+        console.log(outputArr);
+      }
+      findNo();
+    </script>
+  </body>
+</html>
